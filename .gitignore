@@ -1,0 +1,11 @@
+backend/env/
+backend/venv/
+backend/backend/media/uploads
+backend/media/uploads
+
+frontend/node_modules
+
+node_modules/
+.env
+.env.local
+.env.*.local

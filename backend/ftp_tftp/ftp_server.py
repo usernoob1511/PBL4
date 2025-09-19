@@ -13,6 +13,7 @@ def run_ftp_server():
 	authorizer.add_user("hiephc", "huuhiep0303", upload_dir, perm="elradfmwMT")
 	handler = FTPHandler
 	handler.authorizer = authorizer
+	handler.passive_ports = range(60000, 65535)
 	server = FTPServer(("172.28.147.151", 2121), handler)
 	print(f"FTP server running on port 2121, upload dir: {upload_dir}")
 	server.serve_forever()
